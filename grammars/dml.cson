@@ -12,7 +12,7 @@
     'name': 'comment.line.number-sign.dml'
   }
   {
-    'match': '\\b(int|integer|string|String|boolean|Boolean|double|Double|Int|Integer|frame|matrix|scalar|object|Frame|Matrix|Scalar|Object)'
+    'match': '\\b(integer|string|String|boolean|Boolean|double|Double|Integer|frame|matrix|scalar|object|Frame|Matrix|Scalar|Object|int|Int)'
     'name': 'storage.type.dml'
   }
   {
