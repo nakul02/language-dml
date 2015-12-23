@@ -1,0 +1,25 @@
+'.source.dml':
+  'For Loop':
+    'prefix': 'for'
+    'body': 'for (${1:i} in ${2:seq}) ${3:{$0\\}}'
+  'Function':
+    'prefix': 'fun'
+    'body': 'function(${1:x}) ${3:{$0\\}}'
+  'Length':
+    'prefix': 'len'
+    'body': 'length(${1:x})'
+  'Read From File':
+    'prefix': 'rea'
+    'body': 'read("${1:filename}"${2:, header = ${3:TRUE},  sep = "${4:\\t}",  stringsAsFactors = ${5:FALSE}})'
+  'Write to File':
+    'prefix': 'writ'
+    'body': 'write(${1:ident}, "${2:outputfile}", format = "${3:fmt}")'
+  'Sequence (from,to,by)':
+    'prefix': 'seq'
+    'body': 'seq(${1:from}, ${2:to}, ${3:by})'
+  'Order':
+    'prefix': 'sor'
+    'body': 'order(${1:target}, by = ${2:column}, decreasing = ${2:FALSE}, indexreturn = ${4:FALSE}})'
+  'Source':
+    'prefix': 'sou'
+    'body': 'source()'

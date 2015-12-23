@@ -1,0 +1,138 @@
+'fileTypes': [
+  'dml'
+]
+'name': 'SystemML Dml'
+'patterns': [
+  {
+    'begin': '#'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.dml'
+    'end': '\\n'
+    'name': 'comment.line.number-sign.dml'
+  }
+  {
+    'match': '\\b(int|integer|string|String|boolean|Boolean|double|Double|Int|Integer|frame|matrix|scalar|object|Frame|Matrix|Scalar|Object)'
+    'name': 'storage.type.dml'
+  }
+  {
+    'match': '\\b(function|if|for|parfor|else|return|while|setcwd|as)\\b'
+    'name': 'keyword.control.dml'
+  }
+  {
+    'match': '\\b(as\\.scalar|as\\.matrix|as\\.double|as\\.integer|as\\.logical|append|cbind|matrix|min|max|nrow|ncol|length|prod|rand|rbind|removeEmpty|replace|seqsum|pmin|pmax|rowIndexMax|rowIndexMin|ppred|mean|avg|moment|colSums|colMeans|colMaxs|colMins|covtable|cdf|pnorm|pexp|pchisq|pf|pt|icdf|qnorm|qexp|qchisq|qf|qt|aggregate|interQuartileMean|quantile|median|rowSums|rowMeans|rowMaxs|rowMins|cumsum|cumprod|cummin|cummax|sample|outer|print|stop|order|string|seq|read|write|transform)\\b'
+    'name': 'support.function.dml'
+  }
+  {
+    'match': '\\b(source|externalFunction|implemented|in)\\b'
+    'name': 'keyword.control.import.dml'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'entity.name.function.dml'
+    'match': '([[:alpha:]][[:alnum:]_]*)\\s*\\('
+  }
+  {
+    'match': '\\b((([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l)?\\b'
+    'name': 'constant.numeric.dml'
+  }
+  {
+    'match': '\\b(TRUE|FALSE)\\b'
+    'name': 'constant.language.dml'
+  }
+  {
+    'match': '(\\-|\\+|\\*|\\/|%\\/%|%%|%\\*%|\\^)'
+    'name': 'keyword.operator.arithmetic.dml'
+  }
+  {
+    'match': '(=|<-)'
+    'name': 'keyword.operator.assignment.dml'
+  }
+  {
+    'match': '(==|!=|<>|<|>|<=|>=)'
+    'name': 'keyword.operator.comparison.dml'
+  }
+  {
+    'match': '(!|&{1,2}|[|]{1,2})'
+    'name': 'keyword.operator.logical.dml'
+  }
+  {
+    'match': '(\\$)'
+    'name': 'keyword.other.dml'
+  }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.dml'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.dml'
+    'name': 'string.quoted.double.dml'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.dml'
+      }
+    ]
+  }
+  {
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.dml'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.dml'
+    'name': 'string.quoted.single.dml'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.dml'
+      }
+    ]
+  }
+  {
+    'captures':
+      '1':
+        'name': 'entity.name.function.dml'
+      '2':
+        'name': 'keyword.operator.assignment.dml'
+      '3':
+        'name': 'keyword.control.dml'
+    'match': '([[:alpha:]][[:alnum:]:_]*)\\s*(<-|=)\\s*(function)'
+    'name': 'meta.function.dml'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'variable.parameter.dml'
+      '2':
+        'name': 'keyword.operator.assignment.dml'
+    'match': '([[:alpha:]][[:alnum:]_]*)\\s*(=)(?=[^=])'
+  }
+  {
+    'match': '\\b([[:alnum:]_]+)(?=::)'
+    'name': 'entity.namespace.dml'
+  }
+  {
+    'begin': '\\{'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.section.block.begin.dml'
+    'end': '\\}'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.section.block.end.dml'
+    'name': 'meta.block.dml'
+    'patterns': [
+      {
+        'include': 'source.dml'
+      }
+    ]
+  }
+]
+'scopeName': 'source.dml'

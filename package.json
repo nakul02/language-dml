@@ -1,0 +1,16 @@
+{
+  "name": "language-dml",
+  "version": "0.0.1",
+  "author": "Nakul Jindal <nakul02@gmail.com>",
+  "description": "SystemML Dml",
+  "keywords": [
+    "dml",
+    "grammar",
+    "systemml"
+  ],
+  "repository": "https://github.com/nakul02/language-dml",
+  "license": "Apache",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

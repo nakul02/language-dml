@@ -1,0 +1,4 @@
+'.source.dml':
+  'editor':
+    'commentStart': '# '
+    'foldEndPattern': '(^\\s*\\)|^\\s*\\})'
