@@ -20,8 +20,16 @@
     'name': 'keyword.control.dml'
   }
   {
-    'match': '\\b(as\\.scalar|as\\.matrix|as\\.double|as\\.integer|as\\.logical|append|cbind|matrix|min|max|nrow|ncol|length|prod|rand|rbind|removeEmpty|replace|seqsum|pmin|pmax|rowIndexMax|rowIndexMin|ppred|mean|avg|moment|colSums|colMeans|colMaxs|colMins|covtable|cdf|pnorm|pexp|pchisq|pf|pt|icdf|qnorm|qexp|qchisq|qf|qt|aggregate|interQuartileMean|quantile|median|rowSums|rowMeans|rowMaxs|rowMins|cumsum|cumprod|cummin|cummax|sample|outer|print|stop|order|string|seq|read|write|transform)\\b'
+    'match': '\\b(castAsScalar|castAsMatrix|castAsDouble|castAsInteger|castAsLogical|as\\.scalar|as\\.matrix|as\\.double|as\\.integer|as\\.logical|append|cbind|matrix|min |max|min |max|nrow |ncol |length|prod|rand|rbind|removeEmpty|replace|seq|sum|pmin |pmax|rowIndexMax|rowIndexMin|ppred|mean|avg|moment|colSums |colMeans |colMaxs |colMins|cov|table|cdf|pnorm|pexp|pchisq|pf|pt|icdf|qnorm|qexp|qchisq|qf|qt|aggregate|interQuartileMean|quantile|median|rowSums |rowMeans |rowMaxs |rowMins|cumsum|cumprod|cummin|cummax|sample|outer|exp|log|abs|sqrt|round|floor|ceil|sin|cos|tan|asin|acos|atan|diag|eigen|lu|qr|solve|t|trace|append|print|stop|order)\\b'
     'name': 'support.function.dml'
+  }
+  {
+    'match':'\\b(check|par|mode|taskpartitioner|tasksize|datapartitioner|resultmerge|opt)'
+    'name': 'support.variable.dml'
+  }
+  {
+    'match':'\\b(LOCAL|REMOTE_MR|FIXED|NAIVE|STATIC|FACTORING|FACTORING_CMIN|FACTORING_CMAX|NONE|LOCAL_MEM|LOCAL_FILE|LOCAL_AUTOMATIC|RULEBASED|HEURISTIC|GREEDY|FULL_DP)'
+    'name': 'support.constant.dml'
   }
   {
     'match': '\\b(source|externalFunction|implemented|in)\\b'
